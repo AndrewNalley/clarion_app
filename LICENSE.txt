@@ -1,33 +1,3 @@
-# Clarion Studios App
-
-## Description
-
-- One stop shop for all things Clarion Studios.
-
-
-## Table of Contents
-
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-- [Features](#features)
-- [Tests](#tests)
-
-
-## Usage
-
-Check it out. 
-
-
-## Credits
-
-TypeScript error handling: https://engineering.udacity.com/handling-errors-like-a-pro-in-typescript-d7a314ad4991
-
-BrowserRouter tutorial: https://www.youtube.com/watch?v=5s57C7leXc4
-
-
-## License
-
 MIT License
 
 Copyright (c) 2023 Andrew Nalley
@@ -49,19 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-## Features
-
-SPA 
-
-
-
-
-## Tests
-
-
-Use Google Dev Tools to see the responsiveness of the page.
-
-

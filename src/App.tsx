@@ -7,16 +7,20 @@ import {
 
 // layout
 import RootLayout from './layouts/RootLayout';
+import ProfileLayout from './layouts/ProfileLayout';
 
 // components
 import Header from './components/Header';
-import NavBar from './components/NavBar';
+import NavBar from './components/Breadcrumbs';
 import Footer from './components/Footer';
 
 // pages
 import Home from './pages/Home';
-import Schedule from './pages/Schedule';
+import Schedule from './pages/schedules/LessonSchedule';
 import NotFound from './pages/NotFound';
+import MyCalendar from './pages/profile/MyCalendar';
+import MyProfile from './pages/profile/MyProfile';
+import ProfileError from './pages/profile/ProfileError';
 
 // styles
 
@@ -27,6 +31,17 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path='schedule' element={<Schedule />} />
+      <Route path="profile" element={<ProfileLayout />} errorElement={<ProfileError />}>
+        <Route
+          index
+          element={<MyProfile />}
+        />
+         <Route 
+          path=":id" 
+          element={<MyCalendar />}
+          // loader={CalendarLoader}
+        />
+      </Route>
       <Route path='*' element={<NotFound />} />
     </Route>
 
