@@ -1,11 +1,8 @@
-import React from 'react';
 
-function Footer() {
+export default function Footer() {
     return (
         <>
-            <p> Footer </p>
+            <p>Copyright ©️ 2023 Andrew Nalley </p>
         </>
     );
 }
-
-export default Footer;

@@ -1,23 +1,12 @@
-type ErrorName =
-    | 'PAGE_ERROR'
 
-export class ErrorBase extends Error {
-    name: ErrorName;
-    message: string;
-    cause: any;
-
-    constructor({ 
-        name,
-        message,
-        cause
-    }: {
-        name: ErrorName,
-        message: string,
-        cause?: any;
-    }) {
-        super();
-        this.name = name;
-        this.message = message;
-        this.cause = cause;
-    }
-}
+export default function ensureError(value: unknown): Error {
+    if (value instanceof Error) return value
+  
+    let stringified = '[Unable to stringify the thrown value]'
+    try {
+      stringified = JSON.stringify(value)
+    } catch {}
+  
+    const error = new Error(`This value was thrown as is, not through an Error: ${stringified}`)
+    return error
+  }
