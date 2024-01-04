@@ -1,8 +1,9 @@
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear();
     return (
         <>
-            <p>Copyright ©️ 2023 Andrew Nalley </p>
+            <p>Copyright ©️ {currentYear} Andrew Nalley </p>
         </>
     );
 }
